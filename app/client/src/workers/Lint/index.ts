@@ -107,6 +107,7 @@ export const lintTree = (args: LintTreeArgs) => {
           unEvalTree,
           triggerPath,
         ) as unknown) as string;
+        removeLintErrorsFromEntityProperty(evalTree, triggerPath);
         const lintErrors = lintTriggerPath(
           unEvalPropertyValue,
           entity,
